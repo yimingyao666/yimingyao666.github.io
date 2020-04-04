@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="yao">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -43,10 +43,10 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="" class="js-avatar">
+			<img src="/img/blog-avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">yao</a></h1>
 		</hgroup>
 		
 
@@ -101,10 +101,10 @@
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-				<img src="" class="js-avatar">
+				<img src="/img/blog-avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">yao</h1>
 			</hgroup>
 			
 			
@@ -151,6 +151,129 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-基于Hexo-GitHub搭建个人博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/03/%E5%9F%BA%E4%BA%8EHexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">基于Hexo+GitHub搭建个人博客</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/03/%E5%9F%BA%E4%BA%8EHexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" class="archive-article-date">
+  	<time datetime="2020-04-03T13:36:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="一、环境准备"><a href="#一、环境准备" class="headerlink" title="一、环境准备"></a>一、环境准备</h1><p>1、安装git：<a href="https://git-scm.com/downloads" target="_blank" rel="noopener">https://git-scm.com/downloads</a>  </p>
+<p><img src="../blogImg/blog1/git.png" alt="">  </p>
+<p>根据自己的系统选择下载安装</p>
+<p>2、安装Node：<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a>  </p>
+<p><img src="../blogImg/blog1/node.png" alt="">  </p>
+<p>选择稳定版进行下载安装</p>
+<p>3、检查是否安装成功  </p>
+<p>windows: win+R<br>mac: 打开终端<br>检查git：输入<code>git --version</code><br>检查node：输入<code>node -v</code>  </p>
+<p><img src="../blogImg/blog1/check.png" alt="">  </p>
+<p>看到版本号即为安装成功  </p>
+<p>4、npm是node提供的包管理器  </p>
+<p>为了方便快速的下载所需的应用包，建议安装一下淘宝的镜像：<code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code>  </p>
+<p>检查是否安装成功即：<code>cnpm -v</code></p>
+<h1 id="二、安装Hexo博客框架"><a href="#二、安装Hexo博客框架" class="headerlink" title="二、安装Hexo博客框架"></a>二、安装Hexo博客框架</h1><p>1、使用命令：<code>cnpm install -g hexo-cli</code>  </p>
+<p>待安装完后输入：<code>hexo -v</code>，检查是否安装成功  </p>
+<h1 id="三、搭建自己的博客"><a href="#三、搭建自己的博客" class="headerlink" title="三、搭建自己的博客"></a>三、搭建自己的博客</h1><p>1、建一个文件夹，起名为blog或myblog等，名字自己来定义  </p>
+<p>ps：记好自己所建文件夹的位置，如果后续有什么问题，将文件夹删掉，重新操作即可 </p>
+<p>2、进入自己所建文件夹中，以blog为例：<code>cd blog</code>  </p>
+<p>3、初始化博客：<code>hexo init</code>  </p>
+<p>这个过程需要一点时间，请耐心等待一会儿。<br>当看到<code>Start blogging with Hexo!</code>时即为成功。</p>
+<p>4、启动博客：<code>hexo s</code>  </p>
+<p>5、停止启动：<code>control c</code></p>
+<p><img src="../blogImg/blog1/start.jpg" alt="">  </p>
+<p>然后在浏览器输入：<code>http://localhost:4000</code>，即可看到自己的博客。  </p>
+<h1 id="四、写自己的第一篇博客"><a href="#四、写自己的第一篇博客" class="headerlink" title="四、写自己的第一篇博客"></a>四、写自己的第一篇博客</h1><p>1、创建文章：<code>hexo n</code> “题目”，例如：hexo n “我的第一篇博客文章”  </p>
+<p>你可以在source/_post文件夹中看到这篇文章，默认是Markdown格式，你可以使用vs code或其他编辑器打开，创作自己的文章。  </p>
+<p>ps：如果使用vs code建议安装一下扩展：Markdown Preview Enhanced、Markdown Preview Github Styling，这样可以在编辑器中看到写成的样式。  </p>
+<p>2、查看文章  </p>
+<p>·确定在blog位置中<br>·<code>hexo clean</code>：清理缓存<br>·<code>hexo g</code>：生成静态文件<br>·<code>hexo s</code>：启动博客</p>
+<h1 id="五、将自己的博客部署到GitHub上面"><a href="#五、将自己的博客部署到GitHub上面" class="headerlink" title="五、将自己的博客部署到GitHub上面"></a>五、将自己的博客部署到GitHub上面</h1><p>1、进入到自己的GitHub中  </p>
+<p>2、新建一个仓库  </p>
+<p><img src="../blogImg/blog1/github.jpg" alt="">  </p>
+<p>输入名称、描述即可</p>
+<p>ps：命名必须符合：自己的昵称 + .github.io  </p>
+<p>3、安装一个Git上传的插件：<code>cnpm install --save hexo-deployer-git</code>  </p>
+<p>4、在_config.yml中配置Deployment  </p>
+<p><img src="../blogImg/blog1/config.jpg" alt=""></p>
+<p>repo为自己的仓库名</p>
+<p>5、部署到GitHub中：<code>hexo d</code>  </p>
+<p>GitHub中会有上传的文件</p>
+<p>6、在浏览器中输入你的github仓库名即可看到自己的博客</p>
+<h1 id="六、更换博客主题（以yilia主题为例）"><a href="#六、更换博客主题（以yilia主题为例）" class="headerlink" title="六、更换博客主题（以yilia主题为例）"></a>六、更换博客主题（以yilia主题为例）</h1><p>1、下载主题：<code>git clone https://github.com/litten/hexo-theme-yilia.git themes/yilia</code>  </p>
+<p>在文件夹themes下会有yilia文件夹</p>
+<p>2、配置新主题  </p>
+<p><img src="../blogImg/blog1/yilia.jpg" alt="">  </p>
+<p>3、hexo其他主题地址：<a href="https://hexo.io/themes/" target="_blank" rel="noopener">https://hexo.io/themes/</a></p>
+<p>4、本地查看：<code>hexo s</code></p>
+<p>5、部署到github中</p>
+<p>·确定在blog位置中<br>·<code>hexo clean</code>：清理缓存<br>·<code>hexo g</code>：生成静态文件<br>·<code>hexo d</code>：部署博客</p>
+<p>到这里，从环境搭建到部署已经完成，之后可以对自己的博客进行进一步优化。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo github 博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/03/%E5%9F%BA%E4%BA%8EHexo-GitHub%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
@@ -237,7 +360,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 yao
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -318,6 +441,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">hexo github 博客</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
